@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>无</title>
+	</head>
+
+	<body>
+		
+		<script>
+			var a=10;
+			var b=20;
+			var temp=a+b;
+			alert (temp);
+			
+			
+			alert(a==="10");   //全等于比较值和类型
+			alert(a=="10");
+			
+			//正则对象
+			
+			var reg=/^\s+$/;  //    /^ $/全符合返回true
+			a=reg.test(" 8 ");
+			alert(a);
+			reg=/\s+/;         //   /^ $/全不符合返回flase
+			a=reg.test("  8 ");
+			alter(a);
+			
+			//数组对象
+			
+			var arr1={1,2,"a",true};
+			var arr2=new Array();     
+			alter(arr1.length);
+			arr1[4]={"哒哒哒"};
+			alter(arr1.length);       //数组定义后可增长
+			var result=arr1.join();   //连接数组形成字符串
+			var arr2=arr1.reverse();  //倒转数组
+			var temp=arr1.pop();     //删除最后一个元素并返回删除的元素
+			var len=arr1.push(1,'da') //添加元素返回新的数组长度
+			
+			//全局函数
+			
+			eval("var c=10");        //eval(string)函数可以把字符串当作代码执行
+ 			alert(c);
+			
+			var msg1=encodeURI("陈半仙");  //encodeURI(string)把字符串进行URI编码
+			alter(msg1);
+			var msg2=decodeURI(msg1);     //decodeURI(String)把字符串进行字符串解码
+			alert(msg2);
+			
+			var d="11.1";
+			alert(typeof(d));
+			var e=parseInt(d);    //parseInt()解析一个字符串返回int型
+			alert(typeof(e));
+			var f=parseFloat(d);  //同理返回float型
+			alert(typeof(f));
+			var g="a66";
+			var h=parseFloat(g);
+			alert(h);    */          //出现NaN（Not a Number 一个数字类型的标识，表示不是一个正确的数字）
+			
+			//自定义函数
+			
+			function getSum(i,j){
+				return i+j;
+			}                     //function 方法名(形参){函数体}
+								  //函数不存在方法的重载只有方法的覆盖
+								  //函数有默认返回值undefined
+			var result1=getSum(1,2);
+			alert(result1);
+			
+			//自定义对象
+			function Person(name,age){
+				this.name=name;
+				this.age=age;
+			}  
+			
+			var k=new Person("旺","99");
+			alert(k.age);
+			k.sex="男";         //为Person对象声明并赋值
+			alter(k.sex);
+			
+			//对象直接量方式
+			var person={name:"擦撒反",sex:"女"}      //创建person实例对象，不需new
+			alert(person.name);
+			person.age="98";
+			alert(persno.age);
+		</script>
+	</body>
+</html>
